@@ -158,7 +158,7 @@ export const AddProductDialog = ({ open, onOpenChange, onSuccess }: AddProductDi
           {buyingPrice && sellingPrice && (
             <div className="p-3 bg-muted rounded-lg">
               <p className="text-sm font-medium">
-                Profit Per Unit: $
+                Profit Per Unit: KSh 
                 {(parseFloat(sellingPrice) - parseFloat(buyingPrice)).toFixed(2)}
               </p>
             </div>

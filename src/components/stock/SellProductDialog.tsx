@@ -127,7 +127,7 @@ export const SellProductDialog = ({
             <div className="p-4 bg-muted rounded-lg space-y-2">
               <div className="flex justify-between text-sm">
                 <span>Unit Price:</span>
-                <span className="font-medium">${product.selling_price.toFixed(2)}</span>
+                <span className="font-medium">KSh {product.selling_price.toFixed(2)}</span>
               </div>
               <div className="flex justify-between text-sm">
                 <span>Quantity:</span>
@@ -136,7 +136,7 @@ export const SellProductDialog = ({
               <div className="border-t pt-2 flex justify-between">
                 <span className="font-medium">Total Profit:</span>
                 <span className="font-bold text-primary">
-                  ${totalProfit.toFixed(2)}
+                  KSh {totalProfit.toFixed(2)}
                 </span>
               </div>
             </div>

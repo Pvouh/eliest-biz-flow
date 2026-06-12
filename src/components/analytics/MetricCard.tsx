@@ -84,7 +84,7 @@ export function MetricCard({ title, icon: Icon, sales, metricType }: MetricCardP
       </CardHeader>
       <CardContent className="space-y-3">
         <div className="text-3xl font-bold">
-          {metricType === "items" ? calculateMetric() : `$${calculateMetric()}`}
+          {metricType === "items" ? calculateMetric() : `KSh ${calculateMetric()}`}
         </div>
         <Select value={timeFilter} onValueChange={setTimeFilter}>
           <SelectTrigger className="h-9 text-xs">
