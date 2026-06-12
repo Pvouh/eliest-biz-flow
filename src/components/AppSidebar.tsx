@@ -38,11 +38,12 @@ export function AppSidebar() {
   const handleLogout = async () => {
     const { error } = await supabase.auth.signOut();
     if (error) {
-      toast({ title: "Error", description: "Failed to sign out", variant: "destructive" });
-    } else {
-      navigate("/auth");
-      toast({ title: "Signed out", description: "You've been successfully signed out" });
+      console.error("Logout error:", error);
+      // Fallback to local signout to ensure the user isn't stuck
+      await supabase.auth.signOut({ scope: 'local' });
     }
+    navigate("/auth");
+    toast({ title: "Signed out", description: "You've been successfully signed out" });
   };
 
   return (
